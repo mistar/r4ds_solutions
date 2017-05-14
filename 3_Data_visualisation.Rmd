@@ -1,10 +1,10 @@
 ---
-title: "ggplot"
+title: "3 Data visualisation"
 output:
 html_document: default
 html_notebook: default
-pdf_document: default
 ---
+
 ```{r}
 suppressPackageStartupMessages(library(tidyverse))
 ```
