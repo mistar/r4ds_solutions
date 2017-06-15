@@ -1,28 +1,40 @@
 ---
 title: "4 Workflow: basics"
 output:
-  html_document: default
   html_notebook: default
 ---
 
-```{r}
-suppressPackageStartupMessages(library(tidyverse))
+```{r setup, echo = FALSE, message = FALSE}
+library(tidyverse)
+
+knitr::opts_chunk$set(
+  comment = "#>",
+  collapse = TRUE
+)
 ```
 
 # 4.4 Practice
 
 1.  Why does this code not work?
 
+```{r 4.4.1, eval = FALSE}
 my_variable <- 10
-
 my_varıable
+#> Error in eval(expr, envir, enclos): object 'my_varıable' not found
+```
 
 Look carefully! (This may seem like an exercise in pointlessness, but training your brain to notice even the tiniest difference will pay off when programming.)
 
+**
+
 The letter i in first statement does not match the character ı that is used in the second line, so R will not be able to find my_varıable.
+
+***
 
 2.  Tweak each of the following R commands so that they run correctly:
 
+
+```{r 4.4.2, eval = FALSE}
 library(tidyverse)
 
 ggplot(dota = mpg) + 
@@ -30,7 +42,9 @@ ggplot(dota = mpg) +
 
 fliter(mpg, cyl = 8)
 filter(diamond, carat > 3)
+```
 
+**
 
 ```{r}
 # replace dota by data
@@ -44,6 +58,10 @@ filter(mpg, cyl == 8)
 filter(diamonds, carat > 3)
 ```
 
+***
+
 3.  Press Alt + Shift + K. What happens? How can you get to the same place using the menus?
+
+**
 
 The list with shortcut's popes up. Menu/Help/Keyboard Shortcuts Help does the same.
